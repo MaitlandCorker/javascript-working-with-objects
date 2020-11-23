@@ -30,5 +30,7 @@ staff.forEach(function(element) {
     document.getElementById('staffTable').appendChild(newStaffRow);
     });
 
+    localStorage.setItem("count", 1);
+
 //End
 })
