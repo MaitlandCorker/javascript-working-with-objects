@@ -1,24 +1,15 @@
 (function(){
 //Start
-var staff =
- [
- {
- name : "Bob Smith",
- email : "b.smith@busy.com"
- },
- {
- name : "Jane Johnson",
- email : "j.johnson@busy.com"
- },
- {
- name : "Ethan Hawkson",
- email : "e.hawkson@busy.com"
- },
- {
- name : "Julie Grant",
- email : "j.grant@busy.com"
- }
-]
+var staff = []
+
+ document.getElementById('addStaffForm').addEventListener('submit',
+function(ev){
+ev.preventDefault();
+let newStaffName = document.getElementById('staffName').value;
+let newStaffEmail= document.getElementById('staffEmail').value;
+staff.push({name: newStaffName, email: newStaffEmail});
+console.dir(staff)
+})
 staff.forEach(function(element) {
     var newStaffRow = document.createElement("tr");
     var newStaffName = document.createElement("td");
