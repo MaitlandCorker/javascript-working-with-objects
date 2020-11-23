@@ -16,6 +16,26 @@ getInfo : function(){
     return this.name + " " + this.surname
     }
 }
+var qualifications = [
+    {
+    subject : "Maths",
+    grade : "A"
+    },
+    {
+    subject : "English",
+    grade : "B"
+    },
+    {
+    subject : "French",
+    grade : "C"
+    },
+    {
+    subject : "Physics",
+    grade : "B"
+    }
+    ];
+
+console.info(qualifications[1].subject)
 
 console.dir(myObject)
 console.info(myObject.getInfo())
