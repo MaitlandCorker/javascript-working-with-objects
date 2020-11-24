@@ -10,7 +10,9 @@ let newStaffEmail= document.getElementById('staffEmail').value;
 staff.push({name: newStaffName, email: newStaffEmail});
 console.dir(staff)
 })
-staff.forEach(function(element) {
+
+    var rebuildList = function(){
+    staff.forEach(function(element) {
     var newStaffRow = document.createElement("tr");
     var newStaffName = document.createElement("td");
     newStaffName.innerHTML = element.name;
@@ -20,7 +22,7 @@ staff.forEach(function(element) {
     newStaffRow.appendChild(newStaffEmail);
     document.getElementById('staffTable').appendChild(newStaffRow);
     });
-
+    }
     if(localStorage.getItem("count") === null){
         localStorage.setItem("count", 1);
         }else{
